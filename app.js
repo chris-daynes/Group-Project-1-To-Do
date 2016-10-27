@@ -11,9 +11,19 @@ var listData = {items: [
   {name: 'Apples'},
   {name: 'Carrots'}
 ]}
-
-app.get('/', function (req, res) {
+//This is the home page which redirects us to /home
+app.get('/' ,function (req, res) {
+  res.redirect('/list')
+})
+//this is the home page
+app.get('/list', function (req, res) {
     res.render('home', listData);
 });
+
+app.get('/list/new', function (req, res) {
+  res.render('newItem')
+})
+
+
 
 app.listen(3000);
