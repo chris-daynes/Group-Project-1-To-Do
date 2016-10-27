@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/harrison-symes/Group-Project-1-To-Do#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
   }
 }
