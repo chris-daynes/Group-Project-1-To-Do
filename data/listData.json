@@ -1,8 +1,7 @@
-module.exports = [
-  {
-    name: 'Bananas'
-  },
-  {
-    name: 'Apples'
-  }
+{
+  'items': [
+  {'name': 'Bananas', 'category': 'shopping', 'description': 'but some bananas'},
+  {'name': 'Apples', 'category': 'shopping', 'description': 'but some bananas'},
+  {'name': 'Carrots', 'category': 'shopping', 'description': 'but some bananas'}
 ]
+}
