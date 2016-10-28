@@ -15,9 +15,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 var listData = {items: [
-  {id: 1, name: 'Bananas', category: 'shopping', description: 'but some bananas'},
-  {id: 2, name: 'Apples', category: 'shopping', description: 'but some bananas'},
-  {id: 3, name: 'Carrots', category: 'shopping', description: 'but some bananas'}
+  {id: 1, name: 'Bananas', category: 'shopping', description: 'A whole bunch of `em'},
+  {id: 2, name: 'Apples', category: 'shopping', description: "You don't understand the gravity of this situation"},
+  {id: 3, name: 'Carrots', category: 'shopping', description: 'Nothing funny to say, but something bunny to say?'}
 ]}
 //This is the home page which redirects us to /home
 app.get('/' ,function (req, res) {
@@ -39,8 +39,7 @@ app.post('/list', function (req, res) {
 
   var newObj = {
     name: req.body.name,
-    description: req.body.textArea,
-    id: id
+    description: req.body.textArea
   }
 
   listData.items.push(newObj)
