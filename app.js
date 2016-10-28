@@ -34,14 +34,32 @@ app.get('/list/new', function (req, res) {
 
 app.post('/list', function (req, res) {
   console.log(req.body);
+
+  var id = generateId()
+
   var newObj = {
     name: req.body.name,
-    description: req.body.textArea
+    description: req.body.textArea,
+    id: id
   }
+
   listData.items.push(newObj)
   res.redirect("/list");
 })
 
+function generateId() {
+  var ids = []
+  for (var i = 0; i < listData.items.length; i++) {
+    ids.push(listData.items[i].id)
+    console.log(ids)
+  }
+
+  var id = 1;
+  while (ids.includes(id)) {
+    id++;
+  }
+  return id;
+}
 
 
 app.listen(3000);
